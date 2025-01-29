@@ -5,22 +5,24 @@ import TodoList from "./components/TodoList"
 function App() {
 
 
-  const [todos, setTodos] = useState([
-    'Learn React',
-    'Learn Firebase',
-    'Build a project'
-  ])
+  const [todos, setTodos] = useState([])
 
   function handleAddTodos(newTodo) {
     const newTodoList = [...todos, newTodo]
     setTodos(newTodoList)
   }
 
+  function handleDeleteTodo (index) {
+    const newTodoList = todos.filter((todo, todoIndex) => {
+      return todoIndex !== index
+    })
+    setTodos(newTodoList)
+  }
 
   return (
     <>
       <TodoInput handleAddTodos={handleAddTodos}/>
-      <TodoList todos={todos}/>
+      <TodoList handleDeleteTodo={handleDeleteTodo} todos={todos}/>
 
     </>
   )
