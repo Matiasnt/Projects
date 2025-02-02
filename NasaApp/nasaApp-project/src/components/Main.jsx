@@ -1,7 +1,7 @@
 export default function Main() {
   return (
-    <div>
-        <img src="skyrim.jpg" alt="skyrim" />
+    <div className="imgContainer">
+        <img src="skyrim.jpg" alt="skyrim" className="bgImage"/>
     </div>
   )
 }
