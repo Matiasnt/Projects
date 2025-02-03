@@ -4,4 +4,7 @@ export default function Main() {
         <img src="skyrim.jpg" alt="skyrim" className="bgImage"/>
     </div>
   )
-}
+ }
+ 
+ 
+ 
