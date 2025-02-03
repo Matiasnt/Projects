@@ -160,6 +160,37 @@
   opacity: 0.7;
  }
  
+ .loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+ }
+
+ .loadingState i{
+  opacity: 0.2;
+  font-size: 5rem;
+  animation: spin 1s linear infinite;
+ }
+
+ .descriptionTitle{
+  font-size: 0.9rem;
+  font-weight: 200;
+ }
+ .descriptionContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+ }
+
+ @keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+ }
  
  @media (min-width: 640px) {
   .sideBar{
